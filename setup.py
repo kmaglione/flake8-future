@@ -3,13 +3,15 @@ from setuptools import setup
 
 setup(
     name='flake8-future',
-    version='0.1',
+    version='0.2',
     description='A flake8 plugin to warn when any file is missing certain '
                 '__future__ imports.',
     url='https://github.com/kmaglione/flake8-future',
 
     author='Kris Maglione',
     author_email='maglione.k@gmail.com',
+    maintainer='Kris Maglione',
+    maintainer_email='maglione.k@gmail.com',
 
     license='MIT',
 
