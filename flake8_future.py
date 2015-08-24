@@ -44,7 +44,10 @@ class CheckFutures(object):
             if (isinstance(node, ast.ImportFrom) and
                     node.module == '__future__'):
                 imports |= set(name.name for name in node.names)
-            elif not isinstance(node, (ast.Str, ast.Module)):
+            elif isinstance(node, ast.Expr):
+                if not isinstance(node.value, ast.Str):
+                    break
+            elif not isinstance(node, ast.Module):
                 break
 
         if isinstance(node, ast.Module):
