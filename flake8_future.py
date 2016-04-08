@@ -14,8 +14,11 @@ class CheckFutures(object):
     name = 'future'
     version = __version__
 
-    default_expected_imports = {'absolute_import', 'print_function',
-                                'unicode_literals'}
+    default_expected_imports = set([
+        'absolute_import',
+        'print_function',
+        'unicode_literals',
+    ])
 
     def __init__(self, tree, filename):
         self.tree = tree
